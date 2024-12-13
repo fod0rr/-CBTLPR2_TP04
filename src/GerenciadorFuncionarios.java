@@ -84,7 +84,7 @@ public class GerenciadorFuncionarios extends JFrame {
             if (comando != null) comando.close();
             if (conexao != null) conexao.close();
 
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/tp04", "root", "");
+            conexao = DriverManager.getConnection("jdbc:sqlserver://DESKTOP-B1AFHVU;Database=aulajava;IntegratedSecurity=true;encrypt=true;trustServerCertificate=true");
             comando = conexao.prepareStatement(
                 "SELECT f.nome_func, f.sal_func, c.ds_cargo " +
                 "FROM tbfuncs f " +
